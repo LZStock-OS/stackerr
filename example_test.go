@@ -46,7 +46,7 @@ func ExampleThrowPanic() {
 	// Function that throws a panic
 	thrower := func() (err error) {
 		defer stackerr.Recover(&err)
-		
+
 		// ThrowPanic wraps the error and panics
 		stackerr.ThrowPanic(errors.New("critical failure"))
 		return nil
@@ -77,9 +77,9 @@ func Example_configuration() {
 
 	// Reset config for other tests
 	stackerr.Config.Output = os.Stderr
-	
+
 	fmt.Println("Done")
-	
+
 	// Output:
 	// Done
 }

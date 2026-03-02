@@ -89,13 +89,13 @@ func TestMaxStackDepth(t *testing.T) {
 
 func TestPathReplacement(t *testing.T) {
 	defer resetConfig()
-	
+
 	// We'll replace the path to the test file with something unique
 	// Since we don't know the absolute path easily in test without runtime.Caller,
 	// let's just use a replacement that likely matches part of the path.
 	// We know the file is stackerr_test.go.
 	// But the library does simple string replacement on the file path.
-	
+
 	// Let's assume the stack trace contains "stackerr_test.go".
 	// We want to replace "stackerr" with "replaced_lib".
 	stackerr.Config.PathReplacements = map[string]string{
@@ -138,7 +138,7 @@ func TestCustomOutput(t *testing.T) {
 func TestRecoverStandardError(t *testing.T) {
 	defer resetConfig()
 	var err error = errors.New("standard error")
-	
+
 	func() {
 		defer stackerr.Recover(&err)
 	}()
@@ -155,7 +155,7 @@ func TestRecoverStandardError(t *testing.T) {
 func TestRecoverNilError(t *testing.T) {
 	defer resetConfig()
 	var err error
-	
+
 	func() {
 		defer stackerr.Recover(&err)
 	}()
