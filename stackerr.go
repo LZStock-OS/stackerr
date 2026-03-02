@@ -1,3 +1,6 @@
+// Package stackerr provides a lightweight library for panic recovery and error handling
+// with customizable stack traces. It simplifies debugging by capturing clean, readable
+// stack traces when panics occur or when errors are explicitly thrown.
 package stackerr
 
 import (
