@@ -1,5 +1,10 @@
 # stackerr
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/LZStock-OS/stackerr)](https://goreportcard.com/report/github.com/LZStock-OS/stackerr)
+[![Go Doc](https://pkg.go.dev/badge/github.com/LZStock-OS/stackerr.svg)](https://pkg.go.dev/github.com/LZStock-OS/stackerr)
+[![License](https://img.shields.io/github/license/LZStock-OS/stackerr)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/LZStock-OS/stackerr)](https://github.com/LZStock-OS/stackerr/releases)
+
 `stackerr` is a lightweight Go library for panic recovery and error handling with customizable stack traces. It simplifies debugging by capturing clean, readable stack traces when panics occur or when errors are explicitly thrown.
 
 ## Features
